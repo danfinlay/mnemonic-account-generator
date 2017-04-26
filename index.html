@@ -11,6 +11,18 @@ html, body {
 a:visited, a  { color: grey; }
 a:active, a:hover { color: black; }
 
+.accounts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accounts > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
     </style>
     <script src="./bundle.js"></script>
   </head>
@@ -48,7 +60,7 @@ a:active, a:hover { color: black; }
     </section>
 
     <section class="results" style="display:none;">
-      <h1>Your Accounts</h1>
+      <h1>Your Ethereum Accounts</h1>
 
       <ol class="accounts">
       </ol>
