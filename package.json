@@ -1,0 +1,17 @@
+{
+  "name": "mnemonic-account-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bip39": "^2.3.0",
+    "ethereumjs-wallet": "^0.6.0",
+    "qrcode-npm": "0.0.3"
+  }
+}

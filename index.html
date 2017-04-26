@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Mnemonic Account Generator</title>
+    <style>
+html, body {
+  color: white;
+  background: black;
+  font-family: monospace;
+}
+    </style>
+    <script src="./bundle.js"></script>
+  </head>
+
+  <body>
+
+    <h1>Mnemonic Account Generator</h1>
+    <h3>Generate Ethereum Addresses From Mnemonic</h3>
+
+    <section class="mnemonic-input">
+      <textarea
+             class="mnemonic"
+             placeholder="Enter your mnemonic here"
+             style="width:400px;height:300px;">
+      </textarea>
+      <br>
+
+      <span>
+        Number of accounts to generate:
+      </span>
+      <input class="accountCount" type="number" min=1 value=10></input>
+      <br>
+
+      <button class="generate">
+        Generate Accounts
+      </button>
+
+    </section>
+
+    <section class="results" style="display:none;">
+
+      <ol class="accounts">
+      </ol>
+
+      <button class="reset">
+        Reset
+      </button>
+
+    </section>
+
+  </body>
+
+</html>
