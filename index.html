@@ -9,6 +9,10 @@ html, body {
   background: black;
   font-family: monospace;
 }
+
+a:visited, a  { color: grey; }
+a:active, a:hover { color: white; }
+
     </style>
     <script src="./bundle.js"></script>
   </head>
@@ -18,12 +22,18 @@ html, body {
     <h1>Mnemonic Account Generator</h1>
     <h3>Generate Ethereum Addresses From Mnemonic</h3>
 
+    <p>
+      For greatest security, only use on a computer you fully trust.
+    </p>
+    <p>
+      Ideally, use on a computer that is not connected to the internet, and never will be.
+    </p>
+
     <section class="mnemonic-input">
       <textarea
              class="mnemonic"
              placeholder="Enter your mnemonic here"
-             style="width:400px;height:300px;">
-      </textarea>
+             style="width:400px;height:100px;"></textarea>
       <br>
 
       <span>
@@ -48,6 +58,12 @@ html, body {
       </button>
 
     </section>
+
+    <footer>
+      <a href="https://github.com/flyswatter/mnemonic-account-generator">
+        View on GitHub
+      </a>
+    </footer>
 
   </body>
 
