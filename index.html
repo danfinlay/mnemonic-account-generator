@@ -5,13 +5,11 @@
     <title>Mnemonic Account Generator</title>
     <style>
 html, body {
-  color: white;
-  background: black;
   font-family: monospace;
 }
 
 a:visited, a  { color: grey; }
-a:active, a:hover { color: white; }
+a:active, a:hover { color: black; }
 
     </style>
     <script src="./bundle.js"></script>
@@ -19,17 +17,18 @@ a:active, a:hover { color: white; }
 
   <body>
 
-    <h1>Mnemonic Account Generator</h1>
-    <h3>Generate Ethereum Addresses From Mnemonic</h3>
-
-    <p>
-      For greatest security, only use on a computer you fully trust.
-    </p>
-    <p>
-      Ideally, use on a computer that is not connected to the internet, and never will be.
-    </p>
-
     <section class="mnemonic-input">
+
+      <h1>Mnemonic Account Generator</h1>
+      <h3>Generate Ethereum Addresses From Mnemonic</h3>
+
+      <p>
+        For greatest security, only use on a computer you fully trust.
+      </p>
+      <p>
+        Ideally, use on a computer that is not connected to the internet, and never will be.
+      </p>
+
       <textarea
              class="mnemonic"
              placeholder="Enter your mnemonic here"
@@ -37,7 +36,7 @@ a:active, a:hover { color: white; }
       <br>
 
       <span>
-        Number of accounts to generate:
+        Number of accounts to generate (can be slow!)
       </span>
       <input class="accountCount" type="number" min=1 value=10></input>
       <br>
@@ -49,6 +48,7 @@ a:active, a:hover { color: white; }
     </section>
 
     <section class="results" style="display:none;">
+      <h1>Your Accounts</h1>
 
       <ol class="accounts">
       </ol>

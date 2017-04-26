@@ -22481,6 +22481,7 @@ function generateAccounts() {
 
   var resultEl = document.querySelector('section.results > ol.accounts')
   resultEl.innerHTML = ''
+  hideMnemonic()
 
   for (var i = 0; i < accounts.length; i++) {
     var address = accounts[i]
@@ -22499,7 +22500,6 @@ function generateAccounts() {
   }
 
   console.log('results added')
-  hideMnemonic()
 }
 
 function showMnemonic () {
