@@ -1,5 +1,6 @@
 var ethereumGen = require('./generators/ethereum')
 var qrCode = require('qrcode-npm').qrcode
+var recover = require('recover-bip39')
 
 window.addEventListener('load', setup)
 
@@ -15,9 +16,15 @@ function setup() {
 function generateAccounts() {
   console.log('generating accounts')
   var mnemonic = document.querySelector('textarea.mnemonic').value
+
+  var recovered
+  try {
+    recovered = recover(mnemonic)
+  } catch (e) {}
+
   console.log(mnemonic)
   var accountCount = document.querySelector('input.accountCount').value
-  var accounts = ethereumGen(mnemonic, accountCount)
+  var accounts = ethereumGen(recovered || mnemonic, accountCount)
 
   var resultEl = document.querySelector('section.results > ol.accounts')
   resultEl.innerHTML = ''
