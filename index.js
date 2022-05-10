@@ -30,8 +30,10 @@ function generateAccounts() {
   resultEl.innerHTML = ''
   hideMnemonic()
 
+  const showKey = displayKeys.checked;
+
   for (var i = 0; i < accounts.length; i++) {
-    var address = accounts[i]
+    var { address, privKey } = accounts[i]
     var accountEl = document.createElement('div')
     var accountLabel = document.createElement('p')
     accountLabel.innerText = address
@@ -44,6 +46,12 @@ function generateAccounts() {
     accountEl.innerHTML = qrEl
     accountEl.appendChild(accountLabel)
     resultEl.appendChild(accountEl)
+
+    if (displayKeys.checked) {
+      const privKeyEl = document.createElement('p');
+      privKeyEl.innerText = 'Private key: ' + privKey;
+      resultEl.appendChild(privKeyEl);
+    }
   }
 
   console.log('results added')

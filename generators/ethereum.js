@@ -23,7 +23,13 @@ function generateEtherAccountsForMnemonic(mnemonic, accountCount) {
     wallets.push(wallet)
   }
 
-  var hexWallets = wallets.map(w => w.getAddress().toString('hex'))
+  var hexWallets = wallets.map((w) => {
+    console.dir(w);
+    return {
+      address: w.getAddress().toString('hex'),
+      privKey: w.getPrivateKeyString(),
+    }
+  });
 
   return hexWallets
 
